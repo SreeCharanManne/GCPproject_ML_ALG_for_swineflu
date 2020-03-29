@@ -2,7 +2,7 @@ library(caret)
 dataset <- read.csv("Swineflu2.csv")
 dataset$Swineflu = as.factor(dataset$Swineflu)
 
-validation_index <- createDataPartition(dataset$Swineflu, p=0.95, list=FALSE)
+validation_index <- createDataPartition(dataset$Swineflu, p=0.80, list=FALSE)
 
 validation <- dataset[-validation_index,]
 
